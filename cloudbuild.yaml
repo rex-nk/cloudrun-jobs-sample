@@ -19,8 +19,8 @@ steps:
   - '$_JOB_NAME'
   - '--image'
   - 'gcr.io/$PROJECT_ID/$_IMAGE'
-  - '--region'
-  - '$_REGION'
+  # - '--region'
+  # - '$_REGION'
   - '--execute-now'
 images:
 - gcr.io/$PROJECT_ID/$_IMAGE
