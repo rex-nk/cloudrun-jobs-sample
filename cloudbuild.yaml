@@ -1,7 +1,7 @@
 substitutions:
   _IMAGE: 'cloudrun-jobs-sample'
   _JOB_NAME: 'cloudrun-jobs-sample'
-  _REGION: 'asia-northeast1'
+  _REGION: 'us-central1'
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
@@ -19,8 +19,8 @@ steps:
   - '$_JOB_NAME'
   - '--image'
   - 'gcr.io/$PROJECT_ID/$_IMAGE'
-  # - '--region'
-  # - '$_REGION'
+  - '--region'
+  - '$_REGION'
   - '--execute-now'
 images:
 - gcr.io/$PROJECT_ID/$_IMAGE
